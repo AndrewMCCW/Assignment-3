@@ -1,7 +1,9 @@
 
 public class Coupon100Get10Percent implements AddOn, Coupon {
 	public boolean applies(PurchasedItems items) {
-		return true;
+		if(items.getTotalCost() > 100.00)
+			return true;
+		return false;
 	}
 	
 	public String getLines()

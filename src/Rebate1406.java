@@ -8,7 +8,8 @@
  *
  * @author awelsh4
  */
-public class Rebate1406 implements AddOn, Rebate {
+public class Rebate1406 implements Rebate, AddOn {
+
     public boolean applies(PurchasedItems items)
     {
         return items.containsItem("1406");

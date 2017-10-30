@@ -9,13 +9,7 @@
  * @author awelsh4
  */
 public class MDTaxComputation extends TaxComputation {
-	
-	String state_code;
-	
-	public MDTaxComputation()
-	{
-		this.state_code = "MD";
-	}
+	private String statecode = "MD";
 	
     @Override
     public double computeTax (PurchasedItems items, ReceiptDate date)
@@ -29,5 +23,10 @@ public class MDTaxComputation extends TaxComputation {
     protected boolean taxHoliday (ReceiptDate date)
     {
         return false;
+    }
+    
+    public String getStateCode()
+    {
+    	return statecode;
     }
 }

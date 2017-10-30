@@ -10,6 +10,8 @@
  */
 public class CATaxComputation extends TaxComputation {
 	
+	private String statecode;
+	
 	@Override
     public double computeTax (PurchasedItems items, ReceiptDate date)
     {
@@ -24,4 +26,8 @@ public class CATaxComputation extends TaxComputation {
         return false;
     }
     
+    public String getStateCode()
+    {
+    	return statecode;
+    }
 }

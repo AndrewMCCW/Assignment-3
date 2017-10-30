@@ -10,6 +10,8 @@
  */
 public class MATaxComputation extends TaxComputation {
 
+	private String statecode = "MA";
+	
     @Override
     public double computeTax (PurchasedItems items, ReceiptDate date)
     {
@@ -24,5 +26,10 @@ public class MATaxComputation extends TaxComputation {
         if (date.getDate().equals("13/08/2016") || date.getDate().equals("14/08/2016"))
             return true;
         return false;
+    }
+    
+    public String getStateCode()
+    {
+    	return statecode;
     }
 }
